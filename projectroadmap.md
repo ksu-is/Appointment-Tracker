@@ -5,3 +5,9 @@
 - [x] Ensure code repository ownership
 - [x] ReadMe file changes committed
 - [ ] Python base code operational
+
+
+
+Additional Milestones
+- [ ] Base code uploaded as vInventory
+- [ ] vInventory renamed as Appointment Manager
