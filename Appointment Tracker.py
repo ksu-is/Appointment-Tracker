@@ -20,12 +20,12 @@ def create_connection(db_file):
 
 
 def insert_data():
-    name = input("Enter the name of the item: ")
-    ndc = input("Enter the national drug code of the item: ")
-    location = input ("Enter the item inventory location: ")
-    availability = input("Enter number of doses left: ")
-    arrivaldate = input("Enter arrival date: ")
-    expirationdate = input("Enter expiration date: ")
+    name = input("Enter client's full legal name ")
+    ndc = input("Enter contact information: ")
+    location = input ("Enter appointment date MM/DD/YY: ")
+    availability = input("Enter appointment time: ")
+    arrivaldate = input("Enter designed tattoo artist: ")
+    expirationdate = input("Enter tattoo design and location: ")
     changemade = str(now.year) +"/"+str(now.month) +"/"+str(now.day)
     try:      
         sqlresult = conn.execute("INSERT INTO vaccines (name,ndc,location,availability,arrivaldate,expirationdate,changemade)\
