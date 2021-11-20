@@ -8,7 +8,7 @@
 
 # Sprint 2 Milestones
 
-- [ ] Cleaned up the starting code to simply instructions for user. Designated current program use and editable status.
+- [x] Cleaned up the starting code to simply instructions for user. Designated current program use and editable status.
 - [ ] Change #2
 - [ ] Change #3
 - [ ] Change #4
