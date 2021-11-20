@@ -20,7 +20,7 @@ def create_connection(db_file):
 
 
 def insert_data():
-    name = input("Enter client's full legal name ")
+    name = input("Enter client's full legal name: ")
     ndc = input("Enter contact information: ")
     location = input ("Enter appointment date MM/DD/YY: ")
     availability = input("Enter appointment time: ")
@@ -36,12 +36,14 @@ def insert_data():
     except Error as e:
         print ("*** Insert error: ",e)
         pass
-                                 
+
+
+#                                 
 def view_data():
     try:
         cursor = conn.execute ("SELECT id,name, ndc,location,availability,arrivaldate, expirationdate,changemade FROM vaccines" )
         alldata = []
-        alldata.append(["ID","Name","NDC","Location","Availability","Arrival Date","Expiration Date","Last Update"])
+        alldata.append(["Client","Contact Info","Appointment Date","Time","Artist","Design/Location"])
         for row in cursor:
             thisrow=[]
             for x in range(8):
@@ -52,6 +54,8 @@ def view_data():
         print (e)
         pass
 
+
+
 def update_data():
     for row in view_data():
             thisrow = "  --> "
@@ -60,15 +64,15 @@ def update_data():
             print (thisrow)
     update_ID = input("Enter the ID of the data record to edit: ")
     print('''
-        1 = edit name
-        2 = edit ndc
-        3 = edit location
-        4 = edit availability
-        5 = edit arrivaldate
-        6 = edit expirationdate''')
+        1 = edit Client name
+        2 = edit contact information
+        3 = edit appointment date MM/DD/YY
+        4 = edit appointment time
+        5 = edit tattoo artist
+        6 = edit tattoo design and location''')
 
-    feature = input("Enter which feature of the data do you want to edit: ")
-    update_value = input ("Editing "+feature+ ": enter the new value: ")
+    feature = input("Enter the numerical value of the data you want to edit: ")
+    update_value = input ("Editing "+feature+ ": Please enter the updated information: ")
 
     if(feature == "1"):
         sql = "UPDATE vaccines set name = ? where id =  ?"
