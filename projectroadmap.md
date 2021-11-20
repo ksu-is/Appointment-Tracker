@@ -6,6 +6,15 @@
 - [x] ReadMe file changes committed
 - [ ] Python base code operational
 
+# Sprint 2 Milestones
+
+- [x] Cleaned up the starting code to simply instructions for user. Designated current program use and editable status.
+- [ ] Change #2
+- [ ] Change #3
+- [ ] Change #4
+- [ ] Change #5
+- [ ] Change #6
+
 
 
 # Additional Milestones
