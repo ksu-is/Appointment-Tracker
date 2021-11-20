@@ -1,30 +1,23 @@
-''' This is a simple vaccine management system using SQLite. 
-    It demonstrates the capabilities of SQLite. It is not intended for production environments.
-    For example, the changemade variable does not update once the program is started.
-    So, if someone left the application open for a long time and made changes later, the data would not be accurate.
-    '''
+# This is a simple Appointment Tracker system using SQLite.
+# This program allows the user to input client information regarding their appointment and can be edited for each user's preference.
+
+''' This Verison of the Appointment Tracker is meant to be used for a local tattoo shop in Marietta who needs an easier way to track their information regarding clients'''
+   
+# Importing all information required from SQLite.
 import sqlite3
-#importing Error this way let's us refer to it by this name instead of sqlite3.Error
 from sqlite3 import Error 
 import datetime
-#if you code is not connecting to the DB, uncomment the next three lines and read the comments. Also, you may need \ instead of / before the DB file name in windows
-#import os
-#path_root = os.path.dirname(os.path.abspath(__file__)) #grab the file system path to the current script file
-#database_file_path = str(path_root)+"/myinventory.db" #construct the path to the database file (only necessary if the current working directory is not the same as the folder where this Python file is located.)
-#if you uncomment the three lines above, be sure to comment out this next line
+
+# Database connection being established to 'myinventory.db' where all appointment information is stored.
 database_file_path = "myinventory.db"
 def create_connection(db_file):
-    """ create a database connection to the SQLite database
-        specified by the db_file
-    :param db_file: database file
-    :return: Connection object or None
-    """
     try:
         connection = sqlite3.connect(db_file)
         return connection
     except Error as e:
         print(e)
         return None
+
 
 def insert_data():
     name = input("Enter the name of the item: ")
