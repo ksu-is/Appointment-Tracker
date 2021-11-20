@@ -9,7 +9,7 @@
 # Sprint 2 Milestones
 
 - [x] Cleaned up the starting code to simply instructions for user. Designated current program use and editable status.
-- [ ] Change #2
+- [x] Removed vaccine questions from user input, changed them to focus more on tattoo appointment questions.
 - [ ] Change #3
 - [ ] Change #4
 - [ ] Change #5
