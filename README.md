@@ -1,5 +1,8 @@
 # Appointment-Tracker
-Appointment Tracker allows an assigned admin to input client information regarding their appointment and their appointment time. This information is then stored in the myInventory database that can be accessed through DB Browser.
+Appointment Tracker allows an assigned admin to input client information regarding their appointment and their appointment time. This information is then stored in the myInventory database that can be accessed through DB Browser. This program is desgined to be customizable to the users need, questions and variables may be changed to suit individual needdds.
+
+# Unique Ink Store
+This version of Appointment Tracker is designed to operate for a tattoo shop, allowing for artist's to open the program and input client information regarding their appointments.
 
 # Required Software
 - [ ] DB Browser for SQLite V.3.12.2 or newer
