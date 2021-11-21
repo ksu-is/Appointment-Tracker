@@ -43,7 +43,7 @@ def view_data():
     try:
         cursor = conn.execute ("SELECT id,name, ndc,location,availability,arrivaldate, expirationdate,changemade FROM vaccines" )
         alldata = []
-        alldata.append(["Client","Contact Info","Appointment Date","Time","Artist","Design/Location"])
+        alldata.append(["Client |","Contact Info |","Appointment Date |","Time |","Artist |","Design/Location |"])
         for row in cursor:
             thisrow=[]
             for x in range(8):
@@ -101,18 +101,18 @@ def update_data():
         pass
 
 def delete_data():
-    id_  =  input("Enter the ID for the data record to delete:")
+    id_  =  input("Enter the client's ID # to delete record:")
     cursor = conn.cursor() #This sets a spot in the database connection (cursor) for targeted retrieval
     cursor.execute("select name from vaccines where ID = "+id_) #create an object referencing the data
     delete_item = cursor.fetchall() # get the data
-    confirm = input("Are you sure you want to delete " + id_ + " " + str(delete_item[0]) + "? (Enter 'y' to confirm.)")
+    confirm = input("Are you wanting to delete this client? " +  id_ + " " + str(delete_item[0]) + "? (Enter 'y' to delete from the record)")
     if confirm.lower() == "y":
         try:
             delete_sql = "DELETE FROM vaccines WHERE id = ?"
             conn.execute(delete_sql,id_)
             result = conn.commit() #capture the result of the commit and use it to check the result
             if result == None:
-                print (id_ + " " + str(delete_item[0]) + " deleted.")
+                print (id_ + " " + str(delete_item[0]) + " has been removed.")
             else:
                 print ("Deletion failed during SQL execution.")
         except Error as e:
