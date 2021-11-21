@@ -13,12 +13,12 @@
 - [x] Process for updating client information now reflects appointments rather than vaccines. Simplified user input process.
 - [x] Changed the process to remove input database clients, simplified the process and made it easier for the user to understand.
 - [x] Seperated the categories in the code with |, allowing for better readability.
-- [ ] Change #6
+- [X] Removed "Welcome to Vaccine Management System", replaced with "Unique Ink Marietta"; simplified questions and user input when updating client information.
 
 
 
 # Additional Milestones
-- [ ] Base code uploaded as vInventory
+- [X] Base code uploaded as vInventory
 - [ ] vInventory renamed as Appointment Manager
 
 
