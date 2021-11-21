@@ -11,8 +11,8 @@
 - [x] Cleaned up the starting code to simply instructions for user. Designated current program use and editable status.
 - [x] Removed vaccine questions from user input, changed them to focus more on tattoo appointment questions.
 - [x] Process for updating client information now reflects appointments rather than vaccines. Simplified user input process.
-- [ ] Change #4
-- [ ] Change #5
+- [x] Changed the process to remove input database clients, simplified the process and made it easier for the user to understand.
+- [x] Seperated the categories in the code with |, allowing for better readability.
 - [ ] Change #6
 
 
