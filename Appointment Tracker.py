@@ -64,12 +64,12 @@ def update_data():
             print (thisrow)
     update_ID = input("Enter the ID of the data record to edit: ")
     print('''
-        1 = edit Client name
-        2 = edit contact information
-        3 = edit appointment date MM/DD/YY
-        4 = edit appointment time
-        5 = edit tattoo artist
-        6 = edit tattoo design and location''')
+        | 1 | Edit "Client Name"
+        | 2 | Edit "Contact Information
+        | 3 | Edit "Appointment Date MM/DD/YY"
+        | 4 | Edit "Appointment Time"
+        | 5 | Edit "Designated Artist"
+        | 6 | Edit "Design/Location"''')
 
     feature = input("Enter the numerical value of the data you want to edit: ")
     update_value = input ("Editing "+feature+ ": Please enter the updated information: ")
@@ -119,7 +119,7 @@ def delete_data():
             print (e)
             pass
     else:
-        print("Deletion aborted.")
+        print("Appointment deletion canceled")
 
 conn = create_connection(database_file_path)
 now = datetime.datetime.now()
@@ -130,13 +130,13 @@ else:
     print("Error connecting to database.")
 
 while True:
-    print("Welcome to the Vaccine Management System!")
-    print("1 to view the data")
-    print("2 to insert a new data record")
-    print("3 to update a data record")
-    print("4 to delete a data record")
-    print("X to exit")
-    name = input ("Choose an operation to perform: ")
+    print("Unique Ink Appointment Tracker")
+    print("| 1 | Enter '1' for current appointments")
+    print("| 2 | Enter '2' to create a client appointment")
+    print("| 3 | Enter '3' to update an existing client appointment")
+    print("| 4 | Enter '4' to delete an appointment [Appointment must be finished]")
+    print("| X | Enter 'X' to exit the program")
+    name = input ("Choose from the following options to proceed: ")
     if (name =="1"):
         for row in view_data():
             thisrow = "  --> "
